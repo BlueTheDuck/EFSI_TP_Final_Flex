@@ -4,32 +4,30 @@
     background-color: blue;
     background-image: url("./imgs/artwork/the_abyss_map.png");
 }
-#pages > .divider {
+#pages > .page-wrapper {
     display: block;
-    height: var(--nav-bar-size);
+    height: 100vh;
 }
-#pages > .page {
-    background-color: red;
-    height: calc(100vh - var(--nav-bar-size));
+#pages > .page-wrapper > .page {
+    padding-top: var(--nav-bar-size);
 }
-#pages > :last-child {
-    margin: 0px;
-}
+
+
 /* #region Home */
-#home + .page {
+#home .page {
     background: url("./imgs/artwork/wallpaper.jpg") 
 }
+/* #endregion */
+
+/* #region Trailer */
 
 /* #endregion */
 
-#trailer + .page {
-    background-color: yellow;
-}
-#actors {
+#cast .page {
     display: flex;
     justify-content: space-around;
 }
-#actors > .actor {
+#cast .actor {
 
 }
 
