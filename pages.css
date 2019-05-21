@@ -1,8 +1,23 @@
+body {
+    perspective: 2px;
+}
 #pages {
     display: block;
     width: 99vw;
-    background-color: blue;
+    background-color: rgba(0, 0, 0, 0);
+}
+https://alligator.io/css/pure-css-parallax/
+#pages::after {
     background-image: url("./imgs/artwork/the_abyss_map.png");
+    position: absolute;
+    transform: translateZ(-1px) scale(1.5);
+    content: " ";
+    background-size: 100%;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }
 #pages > .page-wrapper {
     display: block;
@@ -10,6 +25,8 @@
 }
 #pages > .page-wrapper > .page {
     padding-top: var(--nav-bar-size);
+    display: block;
+    height: 100%;
 }
 
 
