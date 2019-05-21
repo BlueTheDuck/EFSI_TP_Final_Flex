@@ -1,0 +1,16 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14pt;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+@font-face {
+	font-family: 'Blair ITC';
+	src: url('BlairITC-Medium.woff2') format('woff2'),
+	url('BlairITC-Medium.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+}

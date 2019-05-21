@@ -1,0 +1,15 @@
+.flex {
+    display: flex;
+}
+.flex.horizontal {
+    flex-direction: row;
+}
+.flex.vertical {
+    flex-direction: column;
+}
+.flex.spaced {
+    justify-content: space-around;
+}
+.big-flex {
+    flex: .9;
+}

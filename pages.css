@@ -1,0 +1,47 @@
+#pages {
+    display: block;
+    width: 99vw;
+    background-color: blue;
+    background-image: url("./imgs/artwork/the_abyss_map.png");
+}
+#pages > .divider {
+    display: block;
+    height: var(--nav-bar-size);
+}
+#pages > .page {
+    background-color: red;
+    height: calc(100vh - var(--nav-bar-size));
+}
+#pages > :last-child {
+    margin: 0px;
+}
+/* #region Home */
+#home + .page {
+    background: url("./imgs/artwork/wallpaper.jpg") 
+}
+
+/* #endregion */
+
+#trailer + .page {
+    background-color: yellow;
+}
+#actors {
+    display: flex;
+    justify-content: space-around;
+}
+#actors > .actor {
+
+}
+
+#cast + .page {
+    background-color: blueviolet;
+}
+#cast + .page 
+
+#galeria + .page {
+    background-color: darkcyan;
+}
+
+#criticas + .page {
+    background-color: tomato;
+}
