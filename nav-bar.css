@@ -16,6 +16,9 @@
     left: 0px;
     right: 0px;
 }
+#nav-buttons > .nav-button {
+    align-content: center;
+}
 .nav-button {
     padding: 10px;
     padding-right: 25px;
