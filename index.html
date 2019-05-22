@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="layout.css">
-    <link rel="stylesheet" href="nav-bar.css">
-    <link rel="stylesheet" href="pages.css">
+    <link rel="stylesheet" href="css/nav-bar.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <script src="js/nav-bar.js"></script>
     <title>Made in Abyss</title>
 </head>
+
 <body>
     <div id="nav-bar">
         <div id="nav-buttons" class="flex horizontal spaced">
@@ -22,43 +25,48 @@
             <div class="nav-button"><a href="#criticas">Criticas</a></div>
         </div>
     </div>
-    <div id="pages">
-        <div class="page-wrapper" id="home">
-            <div class="page">
-                <img src="./imgs/mia_logo.png" alt="">
+    <div id="body-wrapper">
+        <div id="pages" class="">
+            <div class="page-wrapper" id="home">
+                <div class="page">
+                    <img src="./imgs/mia_logo.png" alt="">
+                </div>
             </div>
-        </div>
-        <div class="page-wrapper" id="trailer">
-            <div class="page">
-                Trailer page
+            <div class="page-wrapper" id="trailer">
+                <div class="page">
+                    Trailer page
+                </div>
             </div>
-        </div>
-        <div class="page-wrapper" id="cast">
-            <div class="page">
-                <div id="characters">
-                    <div class="character">
-                    <img src="./imgs/characters/riko.jpg" alt="">
-                    <p>Riko (リコ)<br>Miyu Tomita</p>
-                    </div>
-                    <div class="character">
-                        <img src="./imgs/characters/reg.jpg" alt="">
-                    <p>Reg (レグ)<br>Mariya Ise</p>
-                    </div>
-                    <div class="character">
-                       <img src="./imgs/characters/nanachi.jpg" alt="">
-                    <p>Nanachi (ナナチ)<br>Shiori Izawa</p>
+            <div class="page-wrapper" id="cast">
+                <div class="page">
+                    <div id="characters">
+                        <div class="character">
+                            <img src="./imgs/characters/riko.jpg" alt="">
+                            <p>Riko (リコ)<br>Miyu Tomita</p>
+                        </div>
+                        <div class="character">
+                            <img src="./imgs/characters/reg.jpg" alt="">
+                            <p>Reg (レグ)<br>Mariya Ise</p>
+                        </div>
+                        <div class="character">
+                            <img src="./imgs/characters/nanachi.jpg" alt="">
+                            <p>Nanachi (ナナチ)<br>Shiori Izawa</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="page-wrapper" id="galeria">
-            <div class="page"></div>
-        </div>
-        <div class="page-wrapper" id="criticas">
-            <div class="page">
-                besto movie. must protecc
+            <div class="page-wrapper" id="galeria">
+                <div class="page">
+                    pictures
+                </div>
+            </div>
+            <div class="page-wrapper" id="criticas">
+                <div class="page">
+                    besto movie. must protecc
+                </div>
             </div>
         </div>
     </div>
 </body>
+
 </html>
