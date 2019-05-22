@@ -1,12 +1,14 @@
 body {
-    perspective: 2px;
 }
 #pages {
     display: block;
     width: 99vw;
     background-color: rgba(0, 0, 0, 0);
 }
-https://alligator.io/css/pure-css-parallax/
+/* https://alligator.io/css/pure-css-parallax/ */
+.parallax {
+    perspective: 2px;
+}
 #pages::after {
     background-image: url("./imgs/artwork/the_abyss_map.png");
     position: absolute;
@@ -16,7 +18,8 @@ https://alligator.io/css/pure-css-parallax/
     z-index: -1;
     top: 0;
     right: 0;
-    bottom: 0;
+    /* bottom: 0; */
+    height: 500vh;
     left: 0;
 }
 #pages > .page-wrapper {
@@ -24,9 +27,10 @@ https://alligator.io/css/pure-css-parallax/
     height: 100vh;
 }
 #pages > .page-wrapper > .page {
-    padding-top: var(--nav-bar-size);
+    margin-top: var(--nav-bar-size);
     display: block;
-    height: 100%;
+    height: calc(100% - var(--nav-bar-size));
+    padding: 1cm;
 }
 
 
@@ -37,21 +41,19 @@ https://alligator.io/css/pure-css-parallax/
 /* #endregion */
 
 /* #region Trailer */
-
+#trailer .page div {
+}
 /* #endregion */
 
-#cast .page {
+/* #region Cast */
+#cast .page .characters {
     display: flex;
     justify-content: space-around;
 }
 #cast .actor {
 
 }
-
-#cast + .page {
-    background-color: blueviolet;
-}
-#cast + .page 
+/* #endregion */
 
 #galeria + .page {
     background-color: darkcyan;

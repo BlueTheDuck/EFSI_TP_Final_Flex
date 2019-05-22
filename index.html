@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
     <link rel="stylesheet" href="pages.css">
     <title>Made in Abyss</title>
 </head>
+
 <body>
     <div id="nav-bar">
         <div id="nav-buttons" class="flex horizontal spaced">
@@ -22,43 +24,50 @@
             <div class="nav-button"><a href="#criticas">Criticas</a></div>
         </div>
     </div>
-    <div id="pages">
-        <div class="page-wrapper" id="home">
-            <div class="page">
-                <img src="./imgs/mia_logo.png" alt="">
+    <div class="parallax">
+        <div id="pages">
+            <div class="page-wrapper" id="home">
+                <div class="page">
+                    <img src="./imgs/mia_logo.png" alt="">
+                </div>
             </div>
-        </div>
-        <div class="page-wrapper" id="trailer">
-            <div class="page">
-                Trailer page
-            </div>
-        </div>
-        <div class="page-wrapper" id="cast">
-            <div class="page">
-                <div id="characters">
-                    <div class="character">
-                    <img src="./imgs/characters/riko.jpg" alt="">
-                    <p>Riko (リコ)<br>Miyu Tomita</p>
-                    </div>
-                    <div class="character">
-                        <img src="./imgs/characters/reg.jpg" alt="">
-                    <p>Reg (レグ)<br>Mariya Ise</p>
-                    </div>
-                    <div class="character">
-                       <img src="./imgs/characters/nanachi.jpg" alt="">
-                    <p>Nanachi (ナナチ)<br>Shiori Izawa</p>
+            <div class="page-wrapper" id="trailer">
+                <div class="page">
+                    <div class="flex spaced">
+                            <iframe width="853" height="480" src="https://www.youtube.com/embed/DiUKh_MjsI0" frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="page-wrapper" id="galeria">
-            <div class="page"></div>
-        </div>
-        <div class="page-wrapper" id="criticas">
-            <div class="page">
-                besto movie. must protecc
+            <div class="page-wrapper" id="cast">
+                <div class="page">
+                    <div id="characters" class="flex horizontal spaced">
+                        <div class="character">
+                            <img src="./imgs/characters/riko.jpg" alt="">
+                            <p>Riko (リコ)<br>Miyu Tomita</p>
+                        </div>
+                        <div class="character">
+                            <img src="./imgs/characters/reg.jpg" alt="">
+                            <p>Reg (レグ)<br>Mariya Ise</p>
+                        </div>
+                        <div class="character">
+                            <img src="./imgs/characters/nanachi.jpg" alt="">
+                            <p>Nanachi (ナナチ)<br>Shiori Izawa</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page-wrapper" id="galeria">
+                <div class="page"></div>
+            </div>
+            <div class="page-wrapper" id="criticas">
+                <div class="page">
+                    besto movie. must protecc
+                </div>
             </div>
         </div>
     </div>
 </body>
+
 </html>
