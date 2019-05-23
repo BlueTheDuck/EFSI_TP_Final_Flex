@@ -6,6 +6,7 @@
     top: 0px;
     left: 0px;
     right: 0px;
+    height: var(--nav-bar-size);
     overflow: visible;
     z-index: 500;
 }
@@ -15,6 +16,10 @@
     align-items: center;
     left: 0px;
     right: 0px;
+    justify-content: flex-end;
+}
+#nav-buttons img {
+    margin-right: auto;
 }
 #nav-buttons > .nav-button {
     align-content: center;

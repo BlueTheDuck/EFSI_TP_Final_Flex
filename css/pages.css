@@ -5,12 +5,13 @@ body {
     width: 99vw;
     background-color: rgba(0, 0, 0, 0);
 }
+/* #region Parallax WIP */
 /* https://alligator.io/css/pure-css-parallax/ */
 .parallax {
     perspective: 2px;
 }
 #pages::after {
-    background-image: url("./imgs/artwork/the_abyss_map.png");
+    background-image: url("../imgs/artwork/the_abyss_map.png");
     position: absolute;
     transform: translateZ(-1px) scale(1.5);
     content: " ";
@@ -18,10 +19,10 @@ body {
     z-index: -1;
     top: 0;
     right: 0;
-    /* bottom: 0; */
     height: 500vh;
     left: 0;
 }
+/* #endregion */
 #pages > .page-wrapper {
     display: block;
     height: 100vh;
@@ -36,7 +37,7 @@ body {
 
 /* #region Home */
 #home .page {
-    background: url("./imgs/artwork/wallpaper.jpg") 
+    background: url("../imgs/artwork/wallpaper.jpg") 
 }
 /* #endregion */
 
@@ -46,12 +47,14 @@ body {
 /* #endregion */
 
 /* #region Cast */
-#cast .page .characters {
+.characters {
     display: flex;
     justify-content: space-around;
 }
-#cast .actor {
-
+.character {
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
 }
 /* #endregion */
 
