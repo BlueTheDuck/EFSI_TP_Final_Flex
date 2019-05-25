@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./css/layout.css">
     <link rel="stylesheet" href="./css/nav-bar.css">
     <link rel="stylesheet" href="./css/pages.css">
+    <script defer="defer" src="js/scroll.js"></script>
     <title>Made in Abyss</title>
 </head>
 
@@ -17,11 +18,11 @@
         <div id="nav-buttons" class="flex horizontal">
             <img class="logo" src="./imgs/mia_logo.png" alt="">
             <!-- <div class="big-flex">&nbsp;</div> -->
-            <div class="nav-button"><a href="#home">Home</a></div>
-            <div class="nav-button"><a href="#trailer">Trailer</a></div>
-            <div class="nav-button"><a href="#cast">Cast</a></div>
-            <div class="nav-button"><a href="#galeria">Galeria</a></div>
-            <div class="nav-button"><a href="#criticas">Criticas</a></div>
+            <div class="nav-button"><a onclick="smoothScroll('home')" href="#">Home</a></div>
+            <div class="nav-button"><a onclick="smoothScroll('trailer')" href="#">Trailer</a></div>
+            <div class="nav-button"><a onclick="smoothScroll('cast')" href="#">Cast</a></div>
+            <div class="nav-button"><a onclick="smoothScroll('galeria')" href="#">Galeria</a></div>
+            <div class="nav-button"><a onclick="smoothScroll('reviews')" href="#">Criticas</a></div>
         </div>
     </div>
     <div id="pages-wrapper" class="parallax">
@@ -43,17 +44,23 @@
             <div class="page-wrapper" id="cast">
                 <div class="page">
                     <div id="characters" class="flex horizontal spaced">
-                        <div class="character handdrawn1">
+                        <div class="character handdrawn1 flex vertical">
                             <img src="./imgs/characters/riko.png" alt="">
-                            <p>Riko (リコ)<br>CV: Miyu Tomita</p>
+                            <span class="character-data">Riko (リコ)</span>
+                            <span class="character-data">CV (🇯🇵): Miyu Tomita</span>
+                            <span class="character-data">CV (🇪): Brittany Lauda</span>
                         </div>
-                        <div class="character handdrawn2">
+                        <div class="character handdrawn2 flex vertical">
                             <img src="./imgs/characters/reg.png" alt="">
-                            <p>Reg (レグ)<br>CV: Mariya Ise</p>
+                            <span class="character-data">Reg (レグ)</span>
+                            <span class="character-data">CV (🇯🇵): Mariya Ise</span>
+                            <span class="character-data">CV (🇺🇸): Luci Christian</span>
                         </div>
-                        <div class="character handdrawn1">
+                        <div class="character handdrawn1 flex vertical">
                             <img src="./imgs/characters/nanachi.png" alt="">
-                            <p>Nanachi (ナナチ)<br>CV: Shiori Izawa</p>
+                            <span class="character-data">Nanachi (ナナチ)</span>
+                            <span class="character-data">CV (🇯🇵): Shiori Izawa</span>
+                            <span class="character-data">CV (🇺🇸): Brittney Karbowski</span>
                         </div>
                     </div>
                 </div>

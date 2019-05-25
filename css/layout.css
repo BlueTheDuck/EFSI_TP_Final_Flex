@@ -10,6 +10,10 @@
 .flex.spaced {
     justify-content: space-around;
 }
+.flex > img,
+.flexed-image {
+    align-self: center;
+}
 .big-flex {
     flex: .9;
 }
