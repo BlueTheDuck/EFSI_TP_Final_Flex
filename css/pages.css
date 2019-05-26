@@ -10,7 +10,7 @@
     height: 100vh;
     /* transform: translateZ(-1px) scale(1.5); */
 }
-.parallax ::before {
+.parallax div::before {
     content: " ";
     background-image: url(../imgs/artwork/the_abyss_map.png);
     position: absolute;
@@ -72,9 +72,28 @@
 /* #region Cast */
 #characters {
 }
-.character {
+#characters > .character > img {
+    transform: scale(1.05);
+    margin-bottom: 5px;
+}
+#characters > .character {
+    padding: 5px;
     background-color: white;
-    
+}
+#characters > .character > img {
+    border-top: 1px solid black;
+    z-index: 0;
+}
+#characters > .character:nth-child(even) img {
+    border-top-left-radius: 255px 10px;
+    border-top-right-radius: 10px 255px;
+}
+#characters > .character:nth-child(odd) img {
+    border-top-left-radius: 255px 10px;
+    border-top-right-radius: 10px 255px;
+}
+.character > * {
+    font-size: 12pt;
 }
 /* #endregion */
 

@@ -32,6 +32,10 @@ function smoothScroll(to) {
             console.error(`Unknown ${to}`);
             return;
     }
+    if(scroller==undefined) {
+        console.error("Element to scroll is undefined. Please, wait until the pages finishes loading");
+        return;
+    }
     scroller.scroll({
         top: height * window.innerHeight,
         behavior: "smooth"
