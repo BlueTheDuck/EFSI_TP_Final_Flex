@@ -91,7 +91,8 @@
 .page-wrapper {
     display: block;
     height: 100vh;
-    min-height: 800px;
+    min-height: 100vh;
+    margin-bottom: var(--nav-bar-size);
 }
 
 .page {
