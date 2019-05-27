@@ -6,12 +6,7 @@
 
 /* #region Stile */
 
-.card {
-    background-color: white;
-}
-
 /* #region Parallax */
-/* https://alligator.io/css/pure-css-parallax/ */
 .parallax {
     perspective: 1px;
     height: 100vh;
@@ -37,9 +32,24 @@
 .handdrawn3 {
     border: 2px solid black;
 }
+.handdrawn1.only-bottom,
+.handdrawn2.only-bottom,
+.handdrawn3.only-bottom {
+    border: 1px solid black;
+}
 
 .handdrawn1 {
-    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    border-top-left-radius: 255px 15px;
+    border-top-right-radius: 15px 225px;
+    border-bottom-right-radius: 225px 15px;
+    border-bottom-left-radius: 15px 255px;
+}
+.handdrawn1.only-bottom {
+    border: 1px solid black;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom-left-radius: 18px 20px;
+    border-bottom-right-radius: 30px 14px;
 }
 
 .handdrawn2 {
@@ -48,6 +58,13 @@
     border-bottom-right-radius: 15px 255px;
     border-bottom-left-radius: 255px 10px;
 }
+.handdrawn2.only-bottom {
+    border: 1px solid black;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom-left-radius: 13px 32px;
+    border-bottom-right-radius: 44px 12px;
+}
 
 .handdrawn3 {
     border-top-left-radius: 25px 150px;
@@ -55,9 +72,16 @@
     border-bottom-right-radius: 19px 50px;
     border-bottom-left-radius: 500px 10px;
 }
+.handdrawn3.only-bottom {
+    border: 1px solid black;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom-left-radius: 500px 10px;
+    border-bottom-right-radius: 50px 30px;
+}
 
 /* #endregion */
-/* #endregion */
+
 /* #region Page layout */
 #pages-wrapper {
     overflow-y: auto;
@@ -83,26 +107,35 @@
 
 /* #endregion */
 
-/* #region Home */
+/* #region ##Home## */
 #home .page {
-    background: url("../imgs/artwork/wallpaper.jpg");
+    background: url("../imgs/artwork/wallpaper-1.jpg");
     background-size: cover;
 }
+/* #endregion */
 
-#home .page img {
-    width: 100%;
+/* #region ##Trailer## */
+#trailer .page {
+    background: url("../imgs/artwork/wallpaper-2.jpg");
+    background-size: cover;
 }
-
+#trailer .page div {
+    height: 100%;
+}
+#yt-trailer {
+    margin: auto;
+}
 /* #endregion */
 
-/* #region Trailer */
-
-/* #endregion */
-
-/* #region Cast&Crew */
-
+/* #region ##Cast&Crew## */
+#cast-and-crew .page {
+    background: url("../imgs/artwork/garden.png");
+    background-size: cover;
+}
 /* #region >Cast */
-
+#characters {
+    margin-bottom: 1%;
+}
 /* #endregion */
 
 /* #region >Crew */
@@ -115,7 +148,11 @@
 
 /* #endregion */
 
-/* #region Gallery */
+/* #region ##Gallery## */
+#gallery .page {
+    background: url("../imgs/artwork/wallpaper-3.jpg");
+    background-size: cover;
+}
 #images {
     padding: 15px;
 }
@@ -127,33 +164,71 @@
 
 #images>.card img {
     height: 350px;
-    width: 250px;
+    width: 240px;
     object-fit: cover;
-    transform: scale(1.2);
+    transform: scale(1.15);
 }
 
 /* #endregion */
 
-/* #region Reviews */
+/* #region ##Reviews## */
+#reviews .page {
+    padding-left: 5%;
+    padding-right: 5%;
+    background: url("../imgs/artwork/made-in-abyss-ed.jpg");
+    background-size: cover;
+}
 .card-container .card.rating {
-    background-color: white;
     padding: 15px;
 }
-.card.rating#anidb-rating img {
-    height: 100px;
-    transform: scale(1.7);
+
+/* If a rating is use-based then we add the amount of users who contributed and a tooltip*/
+.rating.user-based {
+    cursor: help;
 }
-.card.rating#mal-rating img {
-    height: 70px;
-}
-.card.rating#imbdb-rating img {
-    height: 100px;
-}
-.card.rating#animeflv-rating img {
-    height: 100px;
+.rating.user-based::after {
+    content: " (" attr(data-reviews) ")";
 }
 
-/* #region Star rating */
+/* These are fixes to make the logos display properly */
+.card.rating#anidb-rating {
+    background-color: #B1B3B5;
+}
+.card.rating#anidb-rating img {
+    height: 150px;
+    transform: scale(1.4);
+}
+
+.card.rating#mal-rating img {
+    height: 65px;
+    transform: none;
+}
+
+.card.rating#imdb-rating {
+    background-color: #191919;
+    color: white;
+}
+.card.rating#imdb-rating img {
+    height: 100px;
+    transform: none;
+}
+
+.card.rating#animeflv-rating {
+    background-color: #2F353A;
+    color: white;
+}
+.card.rating#animeflv-rating img {
+    height: 90px;
+    transform: scale(0.9);
+}
+
+/* #region Star rating widget */
+/* To show the amount of stars each site gave,
+we transform the score into a percentage
+then we apply that percentage to the width of
+the yellow stars.
+Also, we place black stars behind the yellow
+stars so when we hide them, the blacks are shown */
 .star-rating {
     display: inline-block;
     width: min-content;

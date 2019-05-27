@@ -9,6 +9,7 @@
 }
 .flex.spaced {
     justify-content: space-around;
+    vertical-align: baseline;
 }
 .flex.wrap {
     flex-wrap: wrap;
@@ -22,6 +23,12 @@
 .flex.zigzag > :nth-child(odd) {
     align-self: flex-start;
 }
+.flex.zigzag > * {
+    transition: margin 1s ease;
+}
+.flex.zigzag > :hover {
+    margin: 0px 5%;
+}
 .flex > img,
 .flexed-image {
     align-self: center;
@@ -29,17 +36,20 @@
 .big-flex {
     flex: .9;
 }
-
-.card-container {
+.age-rating {
+    width: 5%;
+    align-self: flex-start;
 }
+
 .card {
     padding: 7px;
+    background-color: white;
 }
 .card.zoomable {
     transition: transform 1s ease;
 }
 .card.zoomable:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 .card img {
     transform: scale(1.1);

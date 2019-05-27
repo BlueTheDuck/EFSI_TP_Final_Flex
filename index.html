@@ -21,8 +21,8 @@
             <div class="nav-button"><a onclick="smoothScroll('home')" href="#">Home</a></div>
             <div class="nav-button"><a onclick="smoothScroll('trailer')" href="#">Trailer</a></div>
             <div class="nav-button"><a onclick="smoothScroll('cast&crew')" href="#">Cast&Crew</a></div>
-            <div class="nav-button"><a onclick="smoothScroll('gallery')" href="#">Galeria</a></div>
-            <div class="nav-button"><a onclick="smoothScroll('reviews')" href="#">Criticas</a></div>
+            <div class="nav-button"><a onclick="smoothScroll('gallery')" href="#">Gallery</a></div>
+            <div class="nav-button"><a onclick="smoothScroll('reviews')" href="#">Reviews</a></div>
         </div>
     </div>
     <div id="pages-wrapper" class="parallax">
@@ -34,7 +34,7 @@
             <div class="page-wrapper" id="trailer">
                 <div class="page">
                     <div class="flex spaced">
-                        <iframe width="853" height="480" src="https://www.youtube.com/embed/DiUKh_MjsI0" frameborder="0"
+                        <iframe id="yt-trailer" width="853" height="480" src="https://www.youtube.com/embed/DiUKh_MjsI0" frameborder="0"
                             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
                     </div>
@@ -44,19 +44,19 @@
                 <div class="page">
                     <div id="characters" class="card-container flex horizontal spaced">
                         <div class="card character handdrawn1 flex vertical">
-                            <img src="./imgs/characters/riko.png" alt="">
+                            <img class="handdrawn1 only-bottom" src="./imgs/characters/riko.png" alt="">
                             <span class="character-name">Riko (リコ)</span>
                             <span class="character-voice">CV (🇯🇵): Miyu Tomita</span>
                             <span class="character-voice">CV (🇬🇧): Brittany Lauda</span>
                         </div>
                         <div class="card character handdrawn2 flex vertical">
-                            <img src="./imgs/characters/reg.png" alt="">
+                            <img class="handdrawn2 only-bottom" src="./imgs/characters/reg.png" alt="">
                             <span class="character-name">Reg (レグ)</span>
                             <span class="character-voice">CV (🇯🇵): Mariya Ise</span>
                             <span class="character-voice">CV (🇬🇧): Luci Christian</span>
                         </div>
                         <div class="card character handdrawn1 flex vertical">
-                            <img src="./imgs/characters/nanachi.png" alt="">
+                            <img class="handdrawn1 only-bottom" src="./imgs/characters/nanachi.png" alt="">
                             <span class="character-name">Nanachi (ナナチ)</span>
                             <span class="character-voice">CV (🇯🇵): Shiori Izawa</span>
                             <span class="character-voice">CV (🇬🇧): Brittney Karbowski</span>
@@ -64,24 +64,24 @@
                     </div>
                     <div id="crew" class="card-container flex horizontal spaced">
                         <div class="card member handdrawn2 flex vertical">
-                            <img src="./imgs/crew/kojima-masayuki.jpg" alt="" />
+                            <img class="handdrawn2 only-bottom" src="./imgs/crew/kojima-masayuki.jpg" alt="" />
                             <span>Kojima, Masayuki</span>
                             <span>Director</span>
                         </div>
                         <div class="card member handdrawn1 flex vertical">
-                            <img src="./imgs/crew/kevin-penkin.jpg" alt="" />
+                            <img class="handdrawn1 only-bottom" src="./imgs/crew/kevin-penkin.jpg" alt="" />
                             <span>Penkin, Kevin</span>
-                            <span>Compositor musical</span>
+                            <span>Musical compositor</span>
                         </div>
                         <div class="card member handdrawn3 flex vertical">
-                            <img src="./imgs/crew/masuyama-osamu.jpg" alt="" />
+                            <img class="handdrawn3 only-bottom" src="./imgs/crew/masuyama-osamu.jpg" alt="" />
                             <span>Masuyama, Osamu</span>
-                            <span>Director Artistico</span>
+                            <span>Art director</span>
                         </div>
                         <div class="card member handdrawn2 flex vertical">
-                            <img src="./imgs/crew/tsukushi-akihito.jpg" alt="" />
+                            <img class="handdrawn2 only-bottom" src="./imgs/crew/tsukushi-akihito.jpg" alt="" />
                             <span>Tsukushi, Akihito</span>
-                            <span>Creador Original</span>
+                            <span>Creator</span>
                         </div>
                     </div>
                 </div>
@@ -112,26 +112,36 @@
             </div>
             <div class="page-wrapper" id="reviews">
                 <div class="page">
-                    <div class="card-container flex vertical wrap spaced zigzag">
-                        <div id="anidb-rating" class="card rating handdrawn1 flex vertical">
+                    <div class="card-container flex vertical wrap spaced zigzag animate">
+                        <a id="anidb-rating" class="card rating handdrawn1 flex vertical"
+                            href="https://anidb.net/perl-bin/animedb.pl?show=anime&aid=12681"
+                            target="_blank"
+                            title="Open review in new tab">
                             <img src="http://www.userlogos.org/files/logos/zahnjin/anidb_refl.png" alt="aniDB logo">
                             <div class="star-rating" style="--rating: 9.17">
                                 <span class="black-star">★★★★★★★★★★</span>
                                 <span class="yellow-star">★★★★★★★★★★</span>
                             </div>
-                            <span class="rating">9.17 (2697)</span>
-                        </div>
-                        <div id="mal-rating" class="card rating handdrawn3 flex vertical">
+                            <span class="rating user-based" title="Score based on user reviews"
+                                data-reviews="2.697">9.17</span>
+                        </a>
+                        <a id="mal-rating" class="card rating handdrawn3 flex vertical"
+                            href="https://myanimelist.net/anime/34599/Made_in_Abyss"
+                            target="_blank"
+                            title="Open review in new tab">
                             <img src="https://cdn.myanimelist.net/images/mal-logo-xsmall.png?v=180226001"
                                 alt="MyAnimeList logo">
                             <div class="star-rating" style="--rating: 8.87">
                                 <span class="black-star">★★★★★★★★★★</span>
                                 <span class="yellow-star">★★★★★★★★★★</span>
                             </div>
-                            <span class="rating">8.87 (257.531)</span>
-                        </div>
-                        <div id="imdb-rating" class="card rating handdrawn2 flex vertical"
-                            href="https://www.imdb.com/title/tt7222086/?ref_=ttfc_fc_tt">
+                            <span class="rating user-based" title="Score based on user reviews"
+                                data-reviews="257.531">8.87</span>
+                        </a>
+                        <a id="imdb-rating" class="card rating handdrawn2 flex vertical"
+                            href="https://www.imdb.com/title/tt7222086/?ref_=tt_pg"
+                            target="_blank"
+                            title="Open review in new tab">
                             <img src="https://cdn.freebiesupply.com/images/large/2x/imdb-logo-transparent.png"
                                 alt="IMDb logo">
                             <div class="star-rating" style="--rating: 8.5">
@@ -139,17 +149,21 @@
                                 <span class="yellow-star">★★★★★★★★★★</span>
                             </div>
                             <span class="rating">8.5 / 10</span>
-                        </div>
-                        <div id="animeflv-rating" class="card rating handdrawn2 flex vertical">
-                            <img src="./imgs/logos/animeflv.png"
-                                alt="Animeflv logo">
+                        </a>
+                        <a id="animeflv-rating" class="card rating handdrawn2 flex vertical"
+                            href="https://animeflv.net/anime/5337/made-in-abyss#"
+                            target="_blank"
+                            title="Open review in new tab">
+                            <img src="./imgs/logos/animeflv.png" alt="Animeflv logo">
                             <div class="star-rating" style="--rating: calc(4.8 * 2)">
                                 <span class="black-star">★★★★★</span>
                                 <span class="yellow-star">★★★★★</span>
                             </div>
                             <span class="rating">4.8 / 5</span>
-                        </div>
+                        </a>
+                        <div class="big-flex">&nbsp;</div>
                     </div>
+                    <img class="card age-rating" src="https://upload.wikimedia.org/wikipedia/en/c/ce/TV-14_icon.jpg" alt="Rate TV-14">
                 </div>
             </div>
         </div>
