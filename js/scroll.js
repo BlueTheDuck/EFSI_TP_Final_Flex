@@ -3,11 +3,11 @@ let distances = {
     "home": window.innerHeight
 }
 
-window.onload = () => {
+window.addEventListener("DOMContentLoaded",() => {
     scroller = document.querySelector("#pages-wrapper");
 
     window.location.hash = "";
-}
+})
 
 
 function smoothScroll(to) {
@@ -19,10 +19,10 @@ function smoothScroll(to) {
         case "trailer":
             height = 1;
             break;
-        case "cast":
+        case "cast&crew":
             height = 2;
             break;
-        case "galeria":
+        case "gallery":
             height = 3;
             break;
         case "reviews":

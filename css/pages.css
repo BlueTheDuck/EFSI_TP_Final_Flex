@@ -1,15 +1,23 @@
 #pages {
     display: block;
-    width: 99vw;
+    width: 100vw;
     background-color: rgba(0, 0, 0, 0);
 }
+
 /* #region Stile */
+
+.card {
+    background-color: white;
+}
+
+/* #region Parallax */
 /* https://alligator.io/css/pure-css-parallax/ */
 .parallax {
     perspective: 1px;
     height: 100vh;
     /* transform: translateZ(-1px) scale(1.5); */
 }
+
 .parallax div::before {
     content: " ";
     background-image: url(../imgs/artwork/the_abyss_map.png);
@@ -21,22 +29,36 @@
     z-index: -1;
     transform: translateZ(-1px) scale(2.1);
 }
+/* #endregion */
+
 /* #region Handdraw borders */
 .handdrawn1,
-.handdrawn2 {
+.handdrawn2,
+.handdrawn3 {
     border: 2px solid black;
 }
+
 .handdrawn1 {
     border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
 }
+
 .handdrawn2 {
     border-top-left-radius: 25px 255px;
     border-top-right-radius: 255px 25px;
     border-bottom-right-radius: 15px 255px;
     border-bottom-left-radius: 255px 10px;
 }
+
+.handdrawn3 {
+    border-top-left-radius: 25px 150px;
+    border-top-right-radius: 300px 15px;
+    border-bottom-right-radius: 19px 50px;
+    border-bottom-left-radius: 500px 10px;
+}
+
 /* #endregion */
 /* #endregion */
+/* #region Page layout */
 #pages-wrapper {
     overflow-y: auto;
     margin-top: var(--nav-bar-size);
@@ -45,62 +67,114 @@
 .page-wrapper {
     display: block;
     height: 100vh;
+    min-height: 800px;
 }
+
 .page {
     display: block;
     height: calc(100% - var(--nav-bar-size));
-    padding: 1cm;
+    min-height: inherit;
+    padding: 23px;
 }
-.page-wrapper:not(:first) > .page {
+
+.page-wrapper:not(:first)>.page {
     margin-top: var(--nav-bar-size);
 }
+
+/* #endregion */
 
 /* #region Home */
 #home .page {
     background: url("../imgs/artwork/wallpaper.jpg");
+    background-size: cover;
 }
-#home .page img {
 
+#home .page img {
+    width: 100%;
 }
+
 /* #endregion */
 
 /* #region Trailer */
-#trailer .page div {
-}
+
 /* #endregion */
 
-/* #region Cast */
-#characters {
+/* #region Cast&Crew */
+
+/* #region >Cast */
+
+/* #endregion */
+
+/* #region >Crew */
+#crew>.member>img {
+    height: 290px;
+    object-fit: initial;
 }
-#characters > .character > img {
-    transform: scale(1.05);
-    margin-bottom: 5px;
+
+/* #endregion */
+
+/* #endregion */
+
+/* #region Gallery */
+#images {
+    padding: 15px;
 }
-#characters > .character {
-    padding: 5px;
+
+#images>.card {
+    margin: 2% 5%;
+    margin-top: 0px;
+}
+
+#images>.card img {
+    height: 350px;
+    width: 250px;
+    object-fit: cover;
+    transform: scale(1.2);
+}
+
+/* #endregion */
+
+/* #region Reviews */
+.card-container .card.rating {
     background-color: white;
+    padding: 15px;
 }
-#characters > .character > img {
-    border-top: 1px solid black;
-    z-index: 0;
+.card.rating#anidb-rating img {
+    height: 100px;
+    transform: scale(1.7);
 }
-#characters > .character:nth-child(even) img {
-    border-top-left-radius: 255px 10px;
-    border-top-right-radius: 10px 255px;
+.card.rating#mal-rating img {
+    height: 70px;
 }
-#characters > .character:nth-child(odd) img {
-    border-top-left-radius: 255px 10px;
-    border-top-right-radius: 10px 255px;
+.card.rating#imbdb-rating img {
+    height: 100px;
 }
-.character > * {
-    font-size: 12pt;
+.card.rating#animeflv-rating img {
+    height: 100px;
+}
+
+/* #region Star rating */
+.star-rating {
+    display: inline-block;
+    width: min-content;
+    height: 1em;
+    position: relative;
+}
+.star-rating > span {
+    display: inline-block;
+}
+.star-rating .black-star {
+    color: black;
+}
+.star-rating .yellow-star {
+    width: calc(10% * var(--rating));
+    color: yellow;
+    position: absolute;
+    top: 0px;
+}
+.star-rating ~ .rating {
+    align-self: flex-end;
+    margin-right: 6px;
 }
 /* #endregion */
-
-#galeria + .page {
-    background-color: darkcyan;
-}
-
-#criticas + .page {
-    background-color: tomato;
-}
+/* #endregion */
