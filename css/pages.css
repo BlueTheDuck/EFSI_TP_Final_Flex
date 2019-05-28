@@ -102,9 +102,9 @@
     padding: 23px;
 }
 
-.page-wrapper:not(:first)>.page {
+/*.page-wrapper:not(:first)>.page {
     margin-top: var(--nav-bar-size);
-}
+}*/
 
 /* #endregion */
 
