@@ -90,7 +90,7 @@
 
 .page-wrapper {
     display: block;
-    height: 100vh;
+    height: min-content;
     min-height: 100vh;
     margin-bottom: var(--nav-bar-size);
 }
