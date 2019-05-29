@@ -16,11 +16,11 @@
 <body>
     <div id="nav-bar">
         <div id="nav-buttons" class="flex horizontal">
-            <img class="logo" src="./imgs/logos/made-in-abyss.png" alt="">
+            <div class="logo"><a onclick="location.reload()" href="#"><img class="logo" src="./imgs/logos/made-in-abyss.png" alt=""></a></div>
             <!-- <div class="big-flex">&nbsp;</div> -->
             <div class="nav-button"><a onclick="smoothScroll('home')" href="#">Home</a></div>
             <div class="nav-button"><a onclick="smoothScroll('trailer')" href="#">Trailer</a></div>
-            <div class="nav-button"><a onclick="smoothScroll('cast&crew')" href="#">Cast&Crew</a></div>
+            <div class="nav-button"><a onclick="smoothScroll('cast-and-crew')" href="#">Cast&Crew</a></div>
             <div class="nav-button"><a onclick="smoothScroll('gallery')" href="#">Gallery</a></div>
             <div class="nav-button"><a onclick="smoothScroll('reviews')" href="#">Reviews</a></div>
         </div>
@@ -45,7 +45,7 @@
             </div>
             <div class="page-wrapper" id="cast-and-crew">
                 <div class="page">
-                    <div id="characters" class="card-container flex horizontal spaced">
+                    <div id="characters" class="card-container flex horizontal spaced wrap">
                         <div class="card character handdrawn1 flex vertical">
                             <img class="handdrawn1 only-bottom" src="./imgs/characters/riko.png" alt="">
                             <span class="character-name">Riko (リコ)</span>
@@ -65,7 +65,7 @@
                             <span class="character-voice">CV (🇬🇧): Brittney Karbowski</span>
                         </div>
                     </div>
-                    <div id="crew" class="card-container flex horizontal spaced">
+                    <div id="crew" class="card-container flex horizontal spaced wrap">
                         <div class="card member handdrawn2 flex vertical">
                             <img class="handdrawn2 only-bottom" src="./imgs/crew/kojima-masayuki.jpg" alt="" />
                             <span>Kojima, Masayuki</span>
@@ -115,7 +115,7 @@
             </div>
             <div class="page-wrapper" id="reviews">
                 <div class="page">
-                    <div class="card-container flex vertical wrap spaced zigzag animate">
+                    <div class="card-container flex vertical spaced zigzag animate">
                         <a id="anidb-rating" class="card rating handdrawn1 flex vertical"
                             href="https://anidb.net/perl-bin/animedb.pl?show=anime&aid=12681"
                             target="_blank"
@@ -164,7 +164,6 @@
                             </div>
                             <span class="rating">4.8 / 5</span>
                         </a>
-                        <div class="big-flex">&nbsp;</div>
                     </div>
                     <img class="card age-rating" src="https://upload.wikimedia.org/wikipedia/en/c/ce/TV-14_icon.jpg" alt="Rate TV-14">
                 </div>
