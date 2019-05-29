@@ -109,8 +109,15 @@
 
 /* #region ##Home## */
 #home .page {
-    background: url("../imgs/artwork/wallpaper-1.jpg");
-    background-size: cover;
+    background: url("../imgs/artwork/orth.png");
+    background-size: auto 100%;
+    background-position-x: center;
+}
+#home .page .flex {
+    height: 100%;
+}
+#home .page .flex img {
+    display: block;
 }
 /* #endregion */
 
