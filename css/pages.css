@@ -90,8 +90,9 @@
 
 .page-wrapper {
     display: block;
-    height: 100vh;
-    min-height: 800px;
+    height: min-content;
+    min-height: 100vh;
+    margin-bottom: var(--nav-bar-size);
 }
 
 .page {
@@ -101,9 +102,9 @@
     padding: 23px;
 }
 
-.page-wrapper:not(:first)>.page {
+/*.page-wrapper:not(:first)>.page {
     margin-top: var(--nav-bar-size);
-}
+}*/
 
 /* #endregion */
 
